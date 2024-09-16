@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Oswald:wght@600&display=swap');
+.header {
+    display: flex;
+    align-items: center; /* Aligns the logo and title vertically */
+    justify-content: center; /* Centers the logo and title horizontally */
+    gap: 10px; /* Adds some space between the logo and the title */
+}
+  
+.logo {
+    width: 50px; /* Set the width of the logo */
+    height: 50px; /* Set the height of the logo */
+}
+.task-icon {
+    width: 32px; /* Control the size of the icon */
+    height: 32px; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between the icon and the text */
+    vertical-align: middle; /* Align the icon with the middle of the text */}
+  
+body {
+    background-color: #007bff; // Blue background color for the entire page
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;  // Ensures the body covers the whole viewport height
+    display: flex;
+    justify-content: center;
+    align-items: center;  // Centers the container vertically
+}
+
+.container {
+    width: 90%; /* Make container take the full width of the screen */
+    height: 100vh; /* Make container take the full height of the screen */    
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #279791; 
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ffffff; // Title color
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+    color: #ffffff; // Title color
+    margin-bottom: 20px;
+    padding: 10px 0;
+    font-weight: lighter;
+    font-family: "Gill Sans", sans-serif;
+    padding-left: 50px; // Additional padding if needed for further separation
+
+}
+
+.form-control {
+    width: 70%;  // Adjust this value as needed, can be 100% or any fixed width
+    border-radius: 15px;  // Gives rounded corners
+    padding: 10px 15px;  // Optional: Adjust padding to change the height and text position within the input
+    border: 1px solid #ccc;  // Optional: Adds a light border, change color as needed
+}
+
+.card {
+    width: 90%;
+    background-color: #ffffff; // White background for each task card
+    border: 1px solid #ddd; 
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0px 20px;
+    
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.card-title {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card p {
+    color: #555;
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-body {
+    display: contents;
+    justify-content: space-between; // Ensures elements are on opposite ends
+    align-items: center; // Vertically centers items in the container
+    padding: 10px;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px; // Adjust based on your design preference
+    margin-left: auto; // Ensures it pushes to the far right
+}
+
+
+
+
+.card .btn {
+    padding: 5px 10px; // Smaller padding for the buttons
+    font-size: 0.8rem; // Smaller font size for better fit
+    line-height: 1; // Adjust line height to align better
+}
+
+
+
+.task-info {
+    flex-grow: 1; // Allows it to take all available space
+    // padding-right: 50px; // Increased padding to push the buttons further right
+}
+
+.task-actions {
+    flex-shrink: 0; // Prevents the button group from shrinking
+    display: flex;
+    justify-content: flex-end; // Aligns buttons to the right within the container
+    gap: 5px; // Space between buttons
+    padding-left: 500px; // Additional padding if needed for further separation
+}
+
+
+.me-2 {
+    margin-right: 0.5rem;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
+
+.modal-content {
+    width: 100%;
+}
+
+button {
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+
+
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+
+
+.input-group {
+    display: flex;  // Ensures that children are in a row
+    align-items: center;  // Vertically aligns children in the middle
+    padding-left: 50px;
+}
+
+.input-group .form-control {
+    flex-grow: 1;  // Allows the input to grow and fill the space
+}
+
+.btn-primary {
+    background: none;  // Remove background
+    border: none;  // Remove border
+    padding: 10px;  // Remove padding
+    margin-left: 10px;  // Adds some space between the input and the button
+    align-self: center;  // Ensures the button is centered with the input
+}
+
+
+.btn-primary img {
+    width: 40px;  // Adjust the width as necessary
+    height: 40px;  // Adjust the height as necessary
+    display: block;  // Ensure the image aligns correctly
+}
+
+.col-md-4 {
+    padding-left: 50px; // Additional padding if needed for further separation
+
+}

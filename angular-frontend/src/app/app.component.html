@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="header">
+    <img src="https://github.com/pomelohoho/TODO-List-App/blob/master/planning.png?raw=true" alt="Logo" class="logo">
+    <h1 class="text-center mt-4">TaskKeeper</h1>
+  </div>
+
+  <!-- Add New Task -->
+  <div class="input-group mb-3">
+    <input [(ngModel)]="newTask.title" type="text" class="form-control" placeholder="Task Title" />
+    <!-- <input [(ngModel)]="newTask.description" type="text" class="form-control" placeholder="Task Description" /> -->
+    <button class="btn btn-primary" (click)="addTask()">
+      <img src="https://github.com/pomelohoho/TODO-List-App/blob/master/addition.png?raw=true" alt="Add Task">
+  </button>
+  
+  </div>
+
+  <!-- Ongoing Tasks Section -->
+  <div class="row">
+    <div class="col-12">
+      <h2>Ongoing Tasks    <img src="https://github.com/pomelohoho/TODO-List-App/blob/master/processing-time%20(1).png?raw=true" alt="Ongoing Icon" class="task-icon"></h2>
+    </div>
+    <div *ngFor="let task of tasks; let i = index">
+      <div *ngIf="!task.completed" class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="task-info">
+              <h5 class="card-title">{{ task.title }}</h5>
+              <p><small>Created at: {{ task.time }}</small></p>
+            </div>
+            <div class="task-actions">
+              <button class="btn btn-sm btn-secondary" (click)="editTask(task)">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="btn btn-sm btn-danger" (click)="deleteTask(task.id)">
+                <i class="fas fa-trash"></i>
+              </button>
+              <button class="btn btn-sm btn-success" (click)="toggleTaskStatus(task.id)">
+                <i class="fas fa-check"></i>
+              </button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Completed Tasks Section -->
+  <div class="row mt-5">
+    <div class="col-12">
+      <h2>Completed Tasks    <img src="https://github.com/pomelohoho/TODO-List-App/blob/master/accept.png?raw=true" alt="Completed Icon" class="task-icon"></h2>
+    </div>
+    <div *ngFor="let task of tasks; let i = index">
+      <div *ngIf="task.completed" class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="task-info">
+              <h5 class="card-title">{{ task.title }}</h5>
+              <p><small>Completed at: {{ task.time }}</small></p>
+            </div>
+            <div class="task-actions">
+              <button class="btn btn-sm btn-secondary" (click)="editTask(task)">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="btn btn-sm btn-danger" (click)="deleteTask(task.id)">
+                <i class="fas fa-trash"></i>
+              </button>
+              <button class="btn btn-sm btn-success" (click)="toggleTaskStatus(task.id)">
+                <i class="fas fa-check"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Task Modal -->
+  <div *ngIf="editingTask !== null" class="modal">
+    <div class="modal-content">
+      <h5>Edit Task</h5>
+      <input [(ngModel)]="editingTaskContent" type="text" class="form-control mb-2" />
+      <button class="btn btn-primary" (click)="saveEditTask()">Save</button>
+    </div>
+  </div>
+</div>
