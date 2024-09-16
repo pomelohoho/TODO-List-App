@@ -1,6 +1,6 @@
 <div class="container">
   <div class="header">
-    <img src="https://github.com/pomelohoho/TODO-List-App/blob/master/planning.png?raw=true" alt="Logo" class="logo">
+    <img src="https://github.com/pomelohoho/TODO-List-Application/blob/main/images/planning.png?raw=true" alt="Logo" class="logo">
     <h1 class="text-center mt-4">TaskKeeper</h1>
   </div>
 
@@ -9,7 +9,7 @@
     <input [(ngModel)]="newTask.title" type="text" class="form-control" placeholder="Task Title" />
     <!-- <input [(ngModel)]="newTask.description" type="text" class="form-control" placeholder="Task Description" /> -->
     <button class="btn btn-primary" (click)="addTask()">
-      <img src="https://github.com/pomelohoho/TODO-List-App/blob/master/addition.png?raw=true" alt="Add Task">
+      <img src="https://github.com/pomelohoho/TODO-List-Application/blob/main/images/addition.png?raw=true" alt="Add Task">
   </button>
   
   </div>
@@ -17,7 +17,7 @@
   <!-- Ongoing Tasks Section -->
   <div class="row">
     <div class="col-12">
-      <h2>Ongoing Tasks    <img src="https://github.com/pomelohoho/TODO-List-App/blob/master/processing-time%20(1).png?raw=true" alt="Ongoing Icon" class="task-icon"></h2>
+      <h2>Ongoing Tasks    <img src="https://github.com/pomelohoho/TODO-List-Application/blob/main/images/processing-time%20(1).png?raw=true" alt="Ongoing Icon" class="task-icon"></h2>
     </div>
     <div *ngFor="let task of tasks; let i = index">
       <div *ngIf="!task.completed" class="col-md-4">
@@ -48,7 +48,7 @@
   <!-- Completed Tasks Section -->
   <div class="row mt-5">
     <div class="col-12">
-      <h2>Completed Tasks    <img src="https://github.com/pomelohoho/TODO-List-App/blob/master/accept.png?raw=true" alt="Completed Icon" class="task-icon"></h2>
+      <h2>Completed Tasks    <img src="https://github.com/pomelohoho/TODO-List-Application/blob/main/images/accept.png?raw=true" alt="Completed Icon" class="task-icon"></h2>
     </div>
     <div *ngFor="let task of tasks; let i = index">
       <div *ngIf="task.completed" class="col-md-4">
